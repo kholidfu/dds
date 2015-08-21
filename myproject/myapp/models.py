@@ -21,6 +21,7 @@ class Article(models.Model):
     title = models.CharField(max_length=200)
     news_website = models.ForeignKey(NewsWebsite)
     description = models.TextField(blank=True)
+    thumbnail = models.CharField(max_length=200, null=True)
     url = models.URLField()
     checker_runtime = models.ForeignKey(SchedulerRuntime, blank=True,
                                         null=True, on_delete=models.SET_NULL)

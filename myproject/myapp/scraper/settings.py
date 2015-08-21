@@ -14,6 +14,14 @@ USER_AGENT = "%s/%s" % (BOT_NAME, '1.0')
 
 
 ITEM_PIPELINES = {
+    # 'dynamic_scraper.pipelines.DjangoImagesPipeline': 300,
+    'myapp.scraper.pipelines.MyImagesPipeline': 300,
     'dynamic_scraper.pipelines.ValidationPipeline': 400,
     'myapp.scraper.pipelines.DjangoWriterPipeline': 800,
+}
+
+IMAGES_STORE = os.path.join(PROJECT_ROOT, '../thumbnails')
+
+IMAGES_THUMBS = {
+    'small': (170, 170),
 }
