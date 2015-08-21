@@ -1,0 +1,7 @@
+djcelery/
+bin/
+lib/
+local/
+include/
+*~
+*pyc
